@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        let sum = 5+5;
+        let div = 65 / 5;
+        let mul = 5 * 5;
+        let div2 = 10 % 2;
+        console.log('sum:',sum,'div:',div,'mul:',mul,'div2:',div2);*/
+
+        let a1 = 83;
+
+        //console.log(a1++); //постфиксный inc
+        //console.log(a1);
+        //a1 = a1 + 1;
+        //a1 += 1;
+
+        //a1 /= 6;
+        //console.log(a1.toFixed(2));//оставляем 2 цифры после запятой, 
+                                    //но лучше так не делать, так как будет строковый тип
+        
+        let str1 = 'Price';
+        let str2 = '$';
+        let price = (a1 / 6).toFixed(2);
+        let str3 = str1 + ' ' + str2;
+        let str4 = `${str1} product: ${price} ${str2}`; 
+        str4 += ' small';
+
+        let str_len = str4.length;            //длина строки
+        let first_char = str4[0];             //первый
+        let last_char = str4[str4.length -1]; //последний
+        console.log(str4, str_len, first_char, last_char);
+
+        let has_str = str4.includes('$');     //есть ли данный символ (вхождение в строку)
+        let index = str4.indexOf('$');        //на каком месте символ (индекс в строку)
+        let sub = str4.substr(1,5);           //выводит символы(с,до)  
+        let sub1 = str4.substr(1,index);      //вырезал до символа $
+
+        console.log('has_str:',has_str,'index:',index,'sub:',sub,'sub2:',sub1);
+
+        let rep1  = str4.replace('$','p.');    //замена подстроки с $ на p.
+        let s1 = str4.slice(index, index + 5); //вырезает (с, до)      
+        console.log(rep1,s1);
+        let sp = str4.split(' ');              //разбиение  по массиву
+        console.log(sp);
+    </script>
+</body>
+</html>
