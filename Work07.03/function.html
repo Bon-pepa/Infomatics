@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции</title>
+</head>
+<body>
+    <script>
+        function hello(last_name, first_name, midle_name) {
+            let end_index = midle_name.length - 1;
+            let pre_end_index = end_index - 1;
+            let last_symbol = (midle_name[pre_end_index] + midle_name[end_index]).toUpperCase();
+            
+            /*
+            let s = last_symbol.toLowerCase(); // toLowerCase заглавные в строчные
+            console.log(last_symbol, s);
+            */
+
+            let gender;
+            
+            if (last_symbol == 'ИЧ') {
+                gender = 'м';
+            } else if (last_symbol == 'ЛЫ') {
+                gender = 'м';
+            } else if (last_symbol == 'НА') {
+                gender = 'ж';
+            } else if (last_symbol == 'ЗЫ') {
+                gender = 'ж';
+            }
+
+            let date = new Date();
+
+            let month = date.getMonth();
+            let day = date.getDate();
+
+            if (month ==2 && day == 8 && gender == 'ж') {
+                alert('С 8 Марта! ' + first_name);
+            }
+
+            console.log(month, day);
+            
+        }
+
+        //в if - || - логиечское ИЛИ && - логическое И
+        hello('Нестеров', 'Василий', 'Борисович');
+        hello('Горбачёв', 'Альберт', 'Евгеньевич');
+        hello('Рябова', 'Анна', 'Александровна'); 
+    </script>
+</body>
+</html>
