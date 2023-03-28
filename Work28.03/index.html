@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции для работы с массивом</title>
+</head>
+<body>
+    <h1>Функции для работы с массивом</h1>
+
+    <script>
+        let arr = [15, 56, 21, 88, 77, 1, 9, 132, 45, 37];
+        let arr2 = arr.filter((item, index, array) => { //arr[i]=item,
+            //console.log(item);
+            return item > 50;
+
+        });  //вывели числа больше 50 
+        /* еще вариант 
+        let arr2 = arr.filter(item => item > 50);*/
+        
+        let arr3 = arr.map((item, index, array) => {
+            return item * 2;
+        });  //map-перебор массива, умножаем каждый эл на 2
+
+        let arr4 = arr
+                .map((item, index,array) => {
+                    return item > 50 ? item / 2 : item * 2; //если числа > 50 то делим на 2, если < то уможаем 
+                })
+                .filter(item => item > 40 ); 
+
+        /*let arr5 = arr.sort((a, b) => {
+            if (a > b) return 1;
+            if (a === b) return 0;  //=== - сравнение не только значений, но и типов даных
+            if (a < b) return -1;
+        });*/
+
+        //let arr5 = arr.sort((a, b) => a - b); 
+
+        //console.log("1 == '1'",1 == '1'); //true
+        //console.log("1 === '1'",1 === '1'); //false
+        //console.log("true == '1'", true == '1'); //true
+
+        //let arr6 = arr.reverse();
+        
+        /*let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum+= arr[i];
+        }*/
+
+        let arr7 = arr.reduce((sum, item, index, array) => {
+            return sum + item;
+
+        });
+
+        console.log(arr7);
+    </script>
+</body>
+</html>
